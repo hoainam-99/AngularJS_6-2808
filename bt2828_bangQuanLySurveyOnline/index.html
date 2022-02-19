@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Quản Lí Survey Online</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/icon/fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <div class="container">
+        <header class="header">
+            <h2>Survey List</h2>
+            <input type="text" placeholder="Search...">
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th class="title">Title</th>
+                    <th class="status">Status</th>
+                    <th class="question">Questions</th>
+                    <th class="type">Response Type</th>
+                    <th class="view">Survey View</th>
+                    <th class="date">Start Date</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="survey in surveyList">
+                    <td>{{ survey.title }}</td>
+                    <td>
+                        <div ng-if="survey.status">
+                            <i class="fa-solid fa-square-check"></i>
+                        </div>
+                        <div ng-if="!survey.status">
+                            <i class="fa-solid fa-square-xmark"></i>
+                        </div>
+                    </td>
+                    <td>
+                        <i class="fa-solid fa-message"></i>
+                        <span class="sub">{{ survey.questions }}</span>
+                    </td>
+                    <td>{{ survey.type }}</td>
+                    <td>{{ survey.view }}</td>
+                    <td>{{ survey.date | date}}</td>
+                    <td>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="./assets/js/app.js"></script>
+</html>

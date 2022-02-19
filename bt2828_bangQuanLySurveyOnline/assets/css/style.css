@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(204, 204, 204, 0.5);
+}
+
+.container {
+  width: 1024px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.container .header input {
+  padding: 2px 8px;
+  font-size: 17px;
+}
+
+.container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.container table tr {
+  border-bottom: .5px solid #ccc;
+}
+
+.container table tr th {
+  padding: 10px 0;
+  text-align: left;
+}
+
+.container table tr .title {
+  width: 260px;
+}
+
+.container table tr .status {
+  width: 80px;
+}
+
+.container table tr .question {
+  width: 110px;
+}
+
+.container table tr .type {
+  width: 150px;
+}
+
+.container table tr .view {
+  width: 180px;
+}
+
+.container table tr .date {
+  width: 130px;
+}
+
+.container table tr button {
+  width: 60px;
+  padding: 2px 8px;
+  margin: 4px 0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.container table tr button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container table tr .edit {
+  background-color: #05d105;
+}
+
+.container table tr .delete {
+  background-color: red;
+}
+
+.container table tr td .fa-solid {
+  font-size: 35px;
+}
+
+.container table tr td .fa-square-check {
+  color: #05d105;
+}
+
+.container table tr td .fa-square-xmark {
+  color: red;
+}
+
+.container table tr td .fa-message {
+  color: rgba(204, 204, 204, 0.7);
+  z-index: 1;
+}
+
+.container table tr td .sub {
+  position: relative;
+  top: -11px;
+  left: -30px;
+  z-index: 5;
+}
+/*# sourceMappingURL=style.css.map */
